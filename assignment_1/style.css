@@ -1,0 +1,44 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.amazon-grid {
+  display: grid;
+  grid-template-areas:
+    "header  header  header  header"
+    "nav     nav     nav     nav"
+    "sidebar main    main    main"
+    "sidebar main    main    main"
+    "sidebar deals   deals   deals"
+    "footer  footer  footer  footer";
+  grid-template-columns: 220px 1fr 1fr 1fr;
+  grid-template-rows: auto auto 1fr 1fr auto auto;
+  min-height: 100vh;
+  gap: 0;
+}
+
+.header {
+  grid-area: header;
+}
+
+.nav {
+  grid-area: nav;
+}
+
+.sidebar {
+  grid-area: sidebar;
+}
+
+.main {
+  grid-area: main;
+}
+
+.deals {
+  grid-area: deals;
+}
+
+.footer {
+  grid-area: footer;
+}
