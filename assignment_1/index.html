@@ -3,17 +3,32 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Amazon - Grid Layout</title>
+    <title>Simple Shop</title>
     <link href="style.css" rel="stylesheet" />
   </head>
   <body>
-    <div class="amazon-grid">
-      <header class="header">Header</header>
-      <nav class="nav">Navigation</nav>
-      <aside class="sidebar">Sidebar</aside>
-      <main class="main">Main Content</main>
-      <section class="deals">Deals</section>
-      <footer class="footer">Footer</footer>
-    </div>
+    <header class="header">
+      <h1>Simple Shop</h1>
+      <button id="cart-btn" class="cart-btn">Cart (<span id="cart-count">0</span>)</button>
+    </header>
+
+    <main>
+      <section id="products" class="products"></section>
+
+      <aside id="cart" class="cart hidden">
+        <div class="cart-head">
+          <h2>Your Cart</h2>
+          <button id="close-cart" class="ghost-btn">Close</button>
+        </div>
+        <ul id="cart-items" class="cart-items"></ul>
+        <div class="cart-total">
+          <span>Total</span>
+          <strong id="cart-total">$0.00</strong>
+        </div>
+        <button id="checkout" class="checkout-btn">Checkout</button>
+      </aside>
+    </main>
+    <footer class="footer">Simple Shop &copy; 2026</footer>
+    <script src="app.js"></script>
   </body>
 </html>
